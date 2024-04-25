@@ -151,7 +151,7 @@ export const getAnimalWithFoodsById = cache(async (id: number) => {
           WHERE
             foods.id IS NOT NULL
         ),
-        '[]'
+        '[]'::json
       ) AS animal_foods
     FROM
       animals
